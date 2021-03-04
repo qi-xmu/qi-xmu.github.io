@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Python基础 | Qi</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://qi-xmu.github.io/favicon.ico?v=1614866658371">
+<link rel="stylesheet" href="https://qi-xmu.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="这里是关于python的一些基础知识：包括 math, string, list, tuple, dict 的常见用法。
+
+python math模块
+import math
+
+print(math.ceil(4.1))  # 返回数字的上..." />
+    <meta name="keywords" content="python" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://qi-xmu.github.io">
+        <img src="https://qi-xmu.github.io/images/avatar.png?v=1614866658371" class="site-logo">
+        <h1 class="site-title">Qi</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/qi-xmu" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      温故而知新
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://qi-xmu.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Python基础</h2>
+            <div class="post-date">2021-03-04</div>
+            
+            <div class="post-content" v-pre>
+              <p>这里是关于python的一些基础知识：包括 math, string, list, tuple, dict 的常见用法。</p>
+<!-- more -->
+<h2 id="python-math模块">python math模块</h2>
+<pre><code class="language-python">import math
+
+print(math.ceil(4.1))  # 返回数字的上入整数
+print(math.floor(4.9)) # 返回数字的下舍整数
+print(math.fabs(-10))  # 返回数字的绝对值
+print(math.sqrt(9))    # 返回数字的平方根
+print(math.exp(1))     # 返回e的x次幂
+</code></pre>
+<h2 id="python-随机数">python 随机数</h2>
+<pre><code class="language-python">import random
+random.random() 	# 生成0~1的随机数
+random.randint(1,20)# 生成1~20的随机整数
+</code></pre>
+<h2 id="python-字符串操作">python 字符串操作</h2>
+<pre><code class="language-python"># 字符串切片 左闭右开
+a = &quot;string&quot;
+a[1:4]	# tri
+# join(): 以字符作为分隔符，将字符串中所有的元素合并为一个新的字符串
+new_str = '-'.join('Hello') # H-e-l-l-o
+</code></pre>
+<h2 id="python-列表">python 列表</h2>
+<pre><code class="language-python"># 定义
+list1 = ['1','2','3','4']
+# length
+len(list) # 4
+# 获取最后一个元素
+list1[-1]
+# 添加元素
+list1.append(item)
+# 合并列表
+list1.extend(list1)
+# 特定位置插入
+list1.insert(pos, item)
+# 删除某个元素
+del words[pos]
+list1.remove(item)
+words.pop(pos)
+</code></pre>
+<pre><code class="language-python"># 列表切片
+list1[start:end:step]
+# 排序 默认升序 reverse = False
+sorted(list)
+</code></pre>
+<h2 id="python-元组">python 元组</h2>
+<pre><code class="language-python"># list -&gt; tuple
+tuple1 = tuple(list1)
+# 元组切片
+tuple1[start:end:step]
+# 元组修改
+t1 = (1, 2, 3) + (4, 5)	# t1 = (1, 2, 3, 4, 5)
+t2 = (1, 2) * 2			# t2 = (1, 2, 1, 2)
+# 元组的一些函数
+max()
+min()
+sum()
+len()
+</code></pre>
+<h2 id="python-字典">python 字典</h2>
+<pre><code class="language-python"># 定义
+dict1 = {}
+# list -&gt; dict list 可以转成字典，但前提是列表中元素都要成对出现
+dict1 = dict([(item1, item2), (item3, item4)])
+# 字典里的函数 items()  keys() values()
+dict1.item()	# 显示列表，生成迭代器
+dict1.keys()	# 显示键名
+dict1.values()	# 显示键值
+# 字典查找
+dict1.get(key)			# 如果能够取到值，则返回字典中的值，否则返回None
+dict1.get(key, default) # 如果能够取到值，则返回字典中的值，否则返回default
+# pop操作
+dict1.pop()		# 删除并返回
+</code></pre>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://qi-xmu.github.io/tag/HF5waRwcJ/" class="tag">
+                    python
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://qi-xmu.github.io/post/czhong-map-vector-pair/">
+                  <h3 class="post-title">
+                    C++中map， vector， pair
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad()
+  </script>
+
+
+
+
+
+  </body>
+</html>

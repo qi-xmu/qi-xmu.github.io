@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Hello Gridea | Qi</title>
+<title>Python 进阶 | Qi</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,15 +18,13 @@
 
 
 
-    <meta name="description" content="👏  欢迎使用 Gridea ！
-✍️  Gridea 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...
+    <meta name="description" content="这里包括python面向对象的一些基础知识，介绍了python的类，还有json操作，异常处理，文件读写操作。
 
-Github
-Gridea 主页
-示例网站
-特性👇
-📝  你可以使用最酷的 Markdo..." />
-    <meta name="keywords" content="Gridea" />
+python 类
+# 定义类
+class class_name:
+    # Python语言中，会明确地把代表自身实例的se..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
     <div id="app" class="main">
@@ -101,45 +99,89 @@ Gridea 主页
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Hello Gridea</h2>
-            <div class="post-date">2018-12-12</div>
-            
-              <div class="feature-container" style="background-image: url('https://qi-xmu.github.io/post-images/hello-gridea.png')">
-              </div>
+            <h2 class="post-title">Python 进阶</h2>
+            <div class="post-date">2021-03-04</div>
             
             <div class="post-content" v-pre>
-              <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
+              <p>这里包括python面向对象的一些基础知识，介绍了python的类，还有json操作，异常处理，文件读写操作。</p>
+<!--more-->
+<h2 id="python-类">python 类</h2>
+<pre><code class="language-python"># 定义类
+class class_name:
+    # Python语言中，会明确地把代表自身实例的self作为第一个参数传入
+    # init()方法接收参数(一定要有init()函数)
+	def __init__(self, param):
+        self.name = name
+    def fun1():
+        ...
+        pass
+    def fun2():
+        ...
+        pass
+# 调用类 自动调用 init() 
+class1 = class_name(param)
+</code></pre>
+<pre><code class="language-python"># 利用父类构造函数
+class parent_class:
+    def __init__(self, param1):
+        pass
+    def par_fun():
+        pass
+class son_class(parent_class):
+    def __init__(self, param2):
+        pass
+    def son_fun():
+        pass
+    pass
+# 调用
+son_cla1 = son_class(param2)
+son_cla1.son_fun()		# 调用子类的方法
+son_cla1.par_fun()		# 调用父类的方法    
+</code></pre>
+<h2 id="python-json">python json</h2>
+<pre><code class="language-python"># json库
+import json
+# list -&gt; json
+json1 = json.dumps(list1)
+json2 = json.dumps(data, sort_keys=True, indent=2) # 格式化
+# str -&gt; dict
+dict1 = json.loads(str1)
+</code></pre>
+<h2 id="python-异常处理">python 异常处理</h2>
+<pre><code class="language-python">try:
+    ...		# 尝试去做
+    pass
+except Error:
+    ...		# 如果出错
+    pass
+else:
+    ...		# 如果未出错
+    pass
+finally:
+    ...		# 不过如何都会执行
+    pass
+</code></pre>
+<p>python 文件操作</p>
+<pre><code class="language-python"># open() 函数和 with 连用
+with open(file_path, mode) as f: # mode 'w':写 'r':读 'a':追加
+	f.read()		# 读取整个文件为字符串
+    f.readline()	# 读取文件中一行为字符串
+    f.readlines()	# 文件按行读取返回列表
+    
+    f.write(content)# 写入文件
+</code></pre>
 
             </div>
             
-              <div class="tag-container">
-                
-                  <a href="https://qi-xmu.github.io/tag/auYSsHQst/" class="tag">
-                    Gridea
-                  </a>
-                
-              </div>
             
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://qi-xmu.github.io/post/python-ji-chu/">
+                  <h3 class="post-title">
+                    Python基础
+                  </h3>
+                </a>
+              </div>
             
 
             
