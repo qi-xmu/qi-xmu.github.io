@@ -1,20 +1,13 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>C++中map， vector， pair | Qi</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://qi-xmu.github.io/favicon.ico?v=1614867687503">
+<link rel="shortcut icon" href="https://qi-xmu.github.io/favicon.ico?v=1614868400492">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://qi-xmu.github.io/styles/main.css">
-
-
-
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<link rel="alternate" type="application/atom+xml" title="C++中map， vector， pair | Qi - Atom Feed" href="https://qi-xmu.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
@@ -28,85 +21,86 @@ map的种类
 // #include &lt;multimap&gt;	
 #include &lt;unor..." />
     <meta name="keywords" content="C++" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-
-      <div class="sidebar" :class="{ 'full-height': menuVisible }">
-  <div class="top-container" data-aos="fade-right">
-    <div class="top-header-container">
-      <a class="site-title-container" href="https://qi-xmu.github.io">
-        <img src="https://qi-xmu.github.io/images/avatar.png?v=1614867687503" class="site-logo">
-        <h1 class="site-title">Qi</h1>
-      </a>
-      <div class="menu-btn" @click="menuVisible = !menuVisible">
-        <div class="line"></div>
-      </div>
-    </div>
-    <div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://qi-xmu.github.io">
+  <img class="avatar" src="https://qi-xmu.github.io/images/avatar.png?v=1614868400492" alt="">
+  </a>
+  <h1 class="site-title">
+    Qi
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
       
-        
-          <a href="/" class="site-nav">
-            首页
-          </a>
-        
+        <a href="/" class="menu">
+          首页
+        </a>
       
-        
-          <a href="/archives" class="site-nav">
-            归档
-          </a>
-        
+    
       
-        
-          <a href="/tags" class="site-nav">
-            标签
-          </a>
-        
+        <a href="/archives" class="menu">
+          归档
+        </a>
       
-        
-          <a href="/post/about" class="site-nav">
-            关于
-          </a>
-        
+    
       
-    </div>
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
   </div>
-  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
-    <div class="social-container">
+  <div class="social-container">
+    
       
-        
-          <a class="social-link" href="https://github.com/qi-xmu" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        
+    
       
-        
+    
       
-        
+    
       
-        
+    
       
-        
-      
-    </div>
-    <div class="site-description">
-      温故而知新
-    </div>
-    <div class="site-footer">
-      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://qi-xmu.github.io/atom.xml" target="_blank">RSS</a>
-    </div>
+    
   </div>
 </div>
 
-
-      <div class="main-container">
-        <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">C++中map， vector， pair</h2>
-            <div class="post-date">2021-03-03</div>
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              C++中map， vector， pair
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-03-03
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+                <a href="https://qi-xmu.github.io/tag/6uCm07zUL/" class="post-tag">
+                  # C++
+                </a>
+              
+            </div>
             
-            <div class="post-content" v-pre>
-              <p>C++中map， vector， pair用法。</p>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>C++中map， vector， pair用法。</p>
 <!-- more -->
 <h2 id="c中map的用法">C++中map的用法</h2>
 <h4 id="map的种类">map的种类</h4>
@@ -274,58 +268,108 @@ point.first;
 point.second;
 </code></pre>
 
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#c%E4%B8%ADmap%E7%9A%84%E7%94%A8%E6%B3%95">C++中map的用法</a><br>
+*
+<ul>
+<li><a href="#map%E7%9A%84%E7%A7%8D%E7%B1%BB">map的种类</a></li>
+<li><a href="#%E9%9C%80%E8%A6%81%E7%9A%84%E5%A4%B4%E6%96%87%E4%BB%B6">需要的头文件</a></li>
+<li><a href="#%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95">定义方法</a></li>
+<li><a href="#%E5%B8%B8%E7%94%A8%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95">常用成员方法</a></li>
+</ul>
+</li>
+<li><a href="#c%E4%B8%ADvector">C++中vector</a><br>
+*
+<ul>
+<li><a href="#%E7%89%B9%E7%82%B9">特点</a></li>
+<li><a href="#%E5%AE%9A%E4%B9%89%E6%96%B9%E6%B3%95-2">定义方法</a></li>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95">基本用法</a></li>
+<li><a href="#%E5%90%91%E9%87%8F%E7%9A%84%E6%8E%92%E5%BA%8F">向量的排序</a></li>
+<li><a href="#%E5%90%91%E9%87%8F%E7%9A%84%E8%BE%93%E5%87%BA">向量的输出</a></li>
+</ul>
+</li>
+<li><a href="#c%E4%B8%AD%E7%9A%84pair">C++中的pair</a><br>
+*
+<ul>
+<li><a href="#%E5%AE%9A%E4%B9%89">定义</a></li>
+<li><a href="#%E8%AE%BF%E9%97%AE">访问</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://qi-xmu.github.io/tag/6uCm07zUL/" class="tag">
-                    C++
-                  </a>
-                
-              </div>
-            
-            
-              <div class="next-post">
-                <div class="next">下一篇</div>
-                <a href="https://qi-xmu.github.io/post/hello-gridea/">
-                  <h3 class="post-title">
-                    Hello Gridea
-                  </h3>
-                </a>
-              </div>
-            
-
-            
-
-          </div>
-
+          </article>
         </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://qi-xmu.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://qi-xmu.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
       </div>
     </div>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script type="application/javascript">
+    <script>
+      hljs.initHighlightingOnLoad()
 
-AOS.init();
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
-</script>
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-  <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>
-    hljs.initHighlightingOnLoad()
-  </script>
-
-
-
-
-
+    </script>
   </body>
 </html>
