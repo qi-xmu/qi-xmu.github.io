@@ -1,0 +1,293 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jupyterlab安装指南 | Qi</title>
+<link rel="shortcut icon" href="https://qi-xmu.github.io/favicon.ico?v=1615107578971">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://qi-xmu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Jupyterlab安装指南 | Qi - Atom Feed" href="https://qi-xmu.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="简单整理了一下window安装cling环境的步骤。
+
+安装wsl
+只有window专业版才能使用wsl功能，TB购买就可以，可以在控制面板-程序中打开。
+
+选择启用或关闭Window功能
+
+
+然后再微软商店安装：
+!
+启动设置用户名和密码..." />
+    <meta name="keywords" content="jupyterlab,C++" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://qi-xmu.github.io">
+  <img class="avatar" src="https://qi-xmu.github.io/images/avatar.png?v=1615107578971" alt="">
+  </a>
+  <h1 class="site-title">
+    Qi
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/qi-xmu" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Jupyterlab安装指南
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-03-07
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+                <a href="https://qi-xmu.github.io/tag/zoo8FI2V9/" class="post-tag">
+                  # jupyterlab
+                </a>
+              
+                <a href="https://qi-xmu.github.io/tag/6uCm07zUL/" class="post-tag">
+                  # C++
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>简单整理了一下window安装cling环境的步骤。</p>
+<!--more-->
+<h2 id="安装wsl">安装wsl</h2>
+<p>只有<strong>window专业版</strong>才能使用wsl功能，TB购买就可以，可以在控制面板-程序中打开。</p>
+<figure data-type="image" tabindex="1"><img src="https://qi-xmu.github.io/post-images/1615107350402.png" alt="" loading="lazy"></figure>
+<p>选择启用或关闭Window功能</p>
+<figure data-type="image" tabindex="2"><img src="https://qi-xmu.github.io/post-images/1615107372236.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://qi-xmu.github.io/post-images/1615107377806.png" alt="" loading="lazy"></figure>
+<p>然后再微软商店安装：</p>
+<p><img src="https://qi-xmu.github.io/post-images/1615107382684.png" alt="" loading="lazy">!</p>
+<p>启动设置用户名和密码。</p>
+<figure data-type="image" tabindex="4"><img src="https://qi-xmu.github.io/post-images/1615107391460.png" alt="" loading="lazy"></figure>
+<p>打开后，输入</p>
+<pre><code class="language-bash">sudo -i 
+</code></pre>
+<p>输入密码（不可见）</p>
+<h2 id="安装anaconda">安装anaconda</h2>
+<p>下载文件</p>
+<figure data-type="image" tabindex="5"><img src="https://qi-xmu.github.io/post-images/1615107399607.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://qi-xmu.github.io/post-images/1615107404426.png" alt="" loading="lazy"></figure>
+<pre><code class="language-bash"># 这里需要打开文件所在路径，下图可以看到C盘，D盘在linux中挂载的位置，打开你下载文件的位置
+cd [file path]
+</code></pre>
+<figure data-type="image" tabindex="7"><img src="https://qi-xmu.github.io/post-images/1615107411335.png" alt="" loading="lazy"></figure>
+<p>可以看到 anaconda文件，然后输入</p>
+<pre><code class="language-bash"># tab可以自动补全文件名
+bash Anaconda3-2020.11-Linux-x86_64.sh
+</code></pre>
+<p>后面一直ENTER，需要输入的地方都输入yes。等待安装完成。</p>
+<p><strong>激活环境</strong></p>
+<pre><code class="language-bash">cd ~
+source .bashrc
+</code></pre>
+<h2 id="安装jupyterlab30">安装jupyterlab3.0</h2>
+<p><strong>创建环境</strong></p>
+<pre><code class="language-bash">conda create --name cling python=3.8
+</code></pre>
+<p><strong>激活环境</strong></p>
+<pre><code class="language-bash">conda activate cling
+</code></pre>
+<p><strong>安装jupyterlab和xeus-cling</strong></p>
+<pre><code class="language-bash">python -m pip install --upgrade pip
+pip install jupyterlab
+conda install -c conda-forge xeus-cling
+</code></pre>
+<p>如果网速不行可以换源<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">清华源</a></p>
+<pre><code class="language-bash">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
+# 设置搜索时显示通道地址
+conda config --set show_channel_urls yes
+# 显示检索路径，每次安装包时会将包源路径显示出来
+conda config --set show_channel_urls yes
+conda config --set always_yes True
+# 显示所有镜像通道路径命令
+conda config --show channel
+
+### pip换源
+mkdir ~/.pip
+nano ~/.pip/pip.conf
+## 输入
+[global]
+index-url = https://mirrors.aliyun.com/pypi/simple/
+[install]
+trusted-host = mirrors.aliyun.com
+</code></pre>
+<pre><code class="language-bash"># 换回默认源
+conda config --remove-key channels
+</code></pre>
+<p>安装完成之后可以配置jupyterlab，也可能不需要配置。如果输入<code>jupyter lab --allow-root</code>可以正常启动就不用配置吧。</p>
+<pre><code class="language-bash">jupyter lab --generate-config
+</code></pre>
+<p>这个命令会在<code>~/.jupyter/</code>目录下生成配置文件。可以用nano进行编辑</p>
+<pre><code>nano `~/.jupyter/jupyter_notebook_config.py
+</code></pre>
+<p>可以输入，如果需要设置密码建议bing一下。这个地方有很奇怪的地方。</p>
+<pre><code>c.NotebookApp.allow_remote_access = True
+c.NotebookApp.open_browser = False
+c.NotebookApp.ip='*'
+c.NotebookApp.allow_root = True
+c.NotebookApp.notebook_dir = '/mnt/c/Users/36014/项目' #初始路径
+# c.NotebookApp.port = 8080 #自定义端口
+</code></pre>
+<h2 id="安装中文插件">安装中文插件</h2>
+<p>下载中文插件，打开文件对应路径，执行</p>
+<pre><code class="language-bash">pip install jupyterlab_language_pack_zh_CN-0.0.1.dev0-py2.py3-none-any.whl
+</code></pre>
+<figure data-type="image" tabindex="8"><img src="https://qi-xmu.github.io/post-images/1615107447820.png" alt="" loading="lazy"></figure>
+<p>选择中文</p>
+<figure data-type="image" tabindex="9"><img src="https://qi-xmu.github.io/post-images/1615107478708.png" alt="" loading="lazy"></figure>
+<p>选择C++标准就可以编写代码了。</p>
+<h2 id="可能出现的问题">可能出现的问题</h2>
+<p><strong>需要密码</strong></p>
+<figure data-type="image" tabindex="10"><img src="https://qi-xmu.github.io/post-images/1615107495457.png" alt="" loading="lazy"></figure>
+<p>在终端<code>Ctrl + C</code>，可以显示出token，复制token，然后设置自己的密码。</p>
+<figure data-type="image" tabindex="11"><img src="https://qi-xmu.github.io/post-images/1615107503625.png" alt="" loading="lazy"></figure>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85wsl">安装wsl</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85anaconda">安装anaconda</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85jupyterlab30">安装jupyterlab3.0</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E6%8F%92%E4%BB%B6">安装中文插件</a></li>
+<li><a href="#%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98">可能出现的问题</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://qi-xmu.github.io/post/python-jin-jie/">
+              <h3 class="post-title">
+                Python 进阶
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://qi-xmu.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
