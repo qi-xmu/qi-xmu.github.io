@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Jupyterlab安装指南 | Qi</title>
-<link rel="shortcut icon" href="https://qi-xmu.github.io/favicon.ico?v=1615120441618">
+<link rel="shortcut icon" href="https://qi-xmu.github.io/favicon.ico?v=1615219886351">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://qi-xmu.github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Jupyterlab安装指南 | Qi - Atom Feed" href="https://qi-xmu.github.io/atom.xml">
@@ -16,7 +16,7 @@
 更新 2021-03-07
 
 推荐微软官方终端Terminal。可以在微软商店下载。详情点击
-win家庭版也可安装wsl，这里建议使用wsl2。其实Hyper-V是一个很好用的虚拟化平..." />
+win家庭版也可安装wsl，这里建议使用wsl2。安装Docker的时候需要Hyper-V..." />
     <meta name="keywords" content="jupyterlab,C++" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -26,7 +26,7 @@ win家庭版也可安装wsl，这里建议使用wsl2。其实Hyper-V是一个很
       <div class="main-content">
         <div class="site-header">
   <a href="https://qi-xmu.github.io">
-  <img class="avatar" src="https://qi-xmu.github.io/images/avatar.png?v=1615120441618" alt="">
+  <img class="avatar" src="https://qi-xmu.github.io/images/avatar.png?v=1615219886351" alt="">
   </a>
   <h1 class="site-title">
     Qi
@@ -90,7 +90,7 @@ win家庭版也可安装wsl，这里建议使用wsl2。其实Hyper-V是一个很
                 2021-03-07
               </span>
               <span>
-                3 min read
+                5 min read
               </span>
               
                 <a href="https://qi-xmu.github.io/tag/zoo8FI2V9/" class="post-tag">
@@ -110,44 +110,57 @@ win家庭版也可安装wsl，这里建议使用wsl2。其实Hyper-V是一个很
 <p><strong>更新 2021-03-07</strong></p>
 <ul>
 <li>推荐微软官方终端Terminal。可以在微软商店下载。<a href="https://docs.microsoft.com/zh-cn/windows/terminal/get-started">详情点击</a></li>
-<li>win家庭版也可安装wsl，这里建议使用wsl2。其实Hyper-V是一个很好用的虚拟化平台，可以创建虚拟机。<a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">详情点击</a></li>
+<li>win家庭版也可安装wsl，这里建议使用wsl2。安装Docker的时候需要Hyper-V才需要Window专业版，这里我弄混了。Hyper-V是一个很好用的虚拟化平台，可以创建虚拟机。<a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">详情点击</a></li>
 </ul>
 <h2 id="安装wsl">安装wsl</h2>
+<p><a href="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10">详情点击</a></p>
 <p><s>只有<strong>window专业版</strong>才能使用wsl功能，TB购买就可以</s>，可以在控制面板-程序中打开。</p>
 <figure data-type="image" tabindex="1"><img src="https://qi-xmu.github.io/post-images/1615107350402.png" alt="" loading="lazy"></figure>
 <p>选择启用或关闭Window功能</p>
-<figure data-type="image" tabindex="2"><img src="https://qi-xmu.github.io/post-images/1615107372236.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="3"><img src="https://qi-xmu.github.io/post-images/1615107377806.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://qi-xmu.github.io/post-images/1615107377806.png" alt="" loading="lazy"></figure>
 <p>然后在微软商店安装：</p>
 <p><img src="https://qi-xmu.github.io/post-images/1615107382684.png" alt="" loading="lazy">!</p>
-<p>启动设置用户名和密码。</p>
-<figure data-type="image" tabindex="4"><img src="https://qi-xmu.github.io/post-images/1615107391460.png" alt="" loading="lazy"></figure>
+<p>启动设置用户名和密码（在Linux系统中，输入密码的字符是不显示的，但不代表没有）。😇</p>
+<figure data-type="image" tabindex="3"><img src="https://qi-xmu.github.io/post-images/1615107391460.png" alt="" loading="lazy"></figure>
 <p>打开后，输入</p>
 <pre><code class="language-bash">sudo -i 
 </code></pre>
 <p>输入密码（不可见）</p>
 <h2 id="安装anaconda">安装anaconda</h2>
-<p>下载文件</p>
-<figure data-type="image" tabindex="5"><img src="https://qi-xmu.github.io/post-images/1615107399607.png" alt="" loading="lazy"></figure>
-<figure data-type="image" tabindex="6"><img src="https://qi-xmu.github.io/post-images/1615107404426.png" alt="" loading="lazy"></figure>
-<pre><code class="language-bash"># 这里需要打开文件所在路径，下图可以看到C盘，D盘在linux中挂载的位置，打开你下载文件的位置
-cd [file path]
+<p><a href="https://www.anaconda.com/">官网请点击</a></p>
+<p>下载文件<a href="https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh">点击下载</a></p>
+<figure data-type="image" tabindex="4"><img src="https://qi-xmu.github.io/post-images/1615107399607.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="5"><img src="https://qi-xmu.github.io/post-images/1615107404426.png" alt="" loading="lazy"></figure>
+<p>在Ubuntu终端中，安装anaconda。（不要直接打开下载文件）</p>
+<pre><code class="language-bash"># 这里需要打开文件所在路径，下图可以看到C盘，D盘在linux中挂载的位置，打开你下载文件的位置。
+# 这个path是文件所在路径，注意虚拟中的路径和win不一样。
+cd [file_path] 
 </code></pre>
-<figure data-type="image" tabindex="7"><img src="https://qi-xmu.github.io/post-images/1615107411335.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="6"><img src="https://qi-xmu.github.io/post-images/1615107411335.png" alt="" loading="lazy"></figure>
 <p>可以看到 anaconda文件，然后输入</p>
 <pre><code class="language-bash"># tab可以自动补全文件名
 bash Anaconda3-2020.11-Linux-x86_64.sh
 </code></pre>
-<p>后面一直ENTER，需要输入的地方都输入yes。等待安装完成。</p>
-<p><strong>激活环境</strong></p>
+<p><strong>如果上面这一步看不懂，找不到路径，按照下面的步骤执行</strong></p>
+<ol>
+<li>将下载的文件放在<strong>C盘根目录</strong></li>
+<li>执行下面代码：</li>
+</ol>
+<pre><code class="language-bash">bash /mnt/c/Anaconda3-2020.11-Linux-x86_64.sh
+</code></pre>
+<p>后面一直按ENTER键，需要同意的地方都输入yes。等待安装完成。</p>
+<p><strong>激活anaconda环境</strong></p>
 <pre><code class="language-bash">cd ~
 source .bashrc
 </code></pre>
+<p><strong>激活成功后，前面会出现(base)，代表成功</strong></p>
 <h2 id="安装jupyterlab30">安装jupyterlab3.0</h2>
-<p><strong>创建环境</strong></p>
+<p><strong>注意版本号，这里强烈推荐使用Lab3.0，会比notebook好用很多</strong></p>
+<p><strong>创建anaconda虚拟环境</strong></p>
+<p>这里如果下载缓慢，看后面conda换源，改用清华源。（Ctrl+C终止任务，需要多按几次）</p>
 <pre><code class="language-bash">conda create --name cling python=3.8
 </code></pre>
-<p><strong>激活环境</strong></p>
+<p><strong>激活cling环境</strong></p>
 <pre><code class="language-bash">conda activate cling
 </code></pre>
 <p><strong>安装jupyterlab和xeus-cling</strong></p>
@@ -156,30 +169,51 @@ pip install jupyterlab
 conda install -c conda-forge xeus-cling
 </code></pre>
 <p>如果网速不行可以换源<a href="https://mirrors.tuna.tsinghua.edu.cn/help/anaconda/">清华源</a></p>
-<pre><code class="language-bash">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge 
-conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/
-# 设置搜索时显示通道地址
+<pre><code class="language-bash">nano .condarc
+# 输入
+channels:
+  - defaults
+show_channel_urls: true
+default_channels:
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r
+  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2
+custom_channels:
+  conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+  simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
+</code></pre>
+<p><strong>按<code>Ctrl+S</code>保存，<code>Ctrl+X</code>退出</strong></p>
+<p>这部分命令不需要执行，看看就行~~。换源后继续执行前面的代码就可以了。</p>
+<pre><code class="language-bash"># 设置搜索时显示通道地址
 conda config --set show_channel_urls yes
 # 显示检索路径，每次安装包时会将包源路径显示出来
 conda config --set show_channel_urls yes
 conda config --set always_yes True
 # 显示所有镜像通道路径命令
 conda config --show channel
-
-### pip换源
+</code></pre>
+<p>当你使用 pip 下载很慢的时候，可以尝试换源。</p>
+<pre><code class="language-bash">### pip换源，在用户目录下创建 .pip 目录，新建文件。
 mkdir ~/.pip
 nano ~/.pip/pip.conf
 ## 输入
 [global]
-index-url = https://mirrors.aliyun.com/pypi/simple/
+timeout =6000
+index-url =http://pypi.douban.com/simple/
 [install]
-trusted-host = mirrors.aliyun.com
+use-mirrors = true
+mirrors = http://pypi.douban.com/simple/
+trusted-host = pypi.douban.com
 </code></pre>
-<pre><code class="language-bash"># 换回默认源
+<pre><code class="language-bash"># 换回默认源，可以不换回。。。
 conda config --remove-key channels
 </code></pre>
-<p>安装完成之后可以配置jupyterlab，也可能不需要配置。如果输入<code>jupyter lab --allow-root</code>可以正常启动就不用配置吧。</p>
+<p>安装完成之后可以配置jupyterlab，也可能不需要配置。如果输入<code>jupyter lab --allow-root</code>可以正常启动，就不用配置吧。</p>
+<h3 id="配置部分仅供参考建议直接百度">配置部分（仅供参考，建议直接百度）</h3>
 <pre><code class="language-bash">jupyter lab --generate-config
 </code></pre>
 <p>这个命令会在<code>~/.jupyter/</code>目录下生成配置文件。可以用nano进行编辑</p>
@@ -197,15 +231,15 @@ c.NotebookApp.notebook_dir = '/mnt/c/Users/36014/项目' #初始路径
 <p>下载中文插件，打开文件对应路径，执行</p>
 <pre><code class="language-bash">pip install jupyterlab_language_pack_zh_CN-0.0.1.dev0-py2.py3-none-any.whl
 </code></pre>
-<figure data-type="image" tabindex="8"><img src="https://qi-xmu.github.io/post-images/1615107447820.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="7"><img src="https://qi-xmu.github.io/post-images/1615107447820.png" alt="" loading="lazy"></figure>
 <p>选择中文</p>
-<figure data-type="image" tabindex="9"><img src="https://qi-xmu.github.io/post-images/1615107478708.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://qi-xmu.github.io/post-images/1615107478708.png" alt="" loading="lazy"></figure>
 <p>选择C++标准就可以编写代码了。</p>
 <h2 id="可能出现的问题">可能出现的问题</h2>
 <p><strong>需要密码</strong></p>
-<figure data-type="image" tabindex="10"><img src="https://qi-xmu.github.io/post-images/1615107495457.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="9"><img src="https://qi-xmu.github.io/post-images/1615107495457.png" alt="" loading="lazy"></figure>
 <p>在终端<code>Ctrl + C</code>，可以显示出token，复制token，然后设置自己的密码。</p>
-<figure data-type="image" tabindex="11"><img src="https://qi-xmu.github.io/post-images/1615107503625.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://qi-xmu.github.io/post-images/1615107503625.png" alt="" loading="lazy"></figure>
 
               </div>
               <div class="toc-container">
@@ -214,7 +248,11 @@ c.NotebookApp.notebook_dir = '/mnt/c/Users/36014/项目' #初始路径
 <ul>
 <li><a href="#%E5%AE%89%E8%A3%85wsl">安装wsl</a></li>
 <li><a href="#%E5%AE%89%E8%A3%85anaconda">安装anaconda</a></li>
-<li><a href="#%E5%AE%89%E8%A3%85jupyterlab30">安装jupyterlab3.0</a></li>
+<li><a href="#%E5%AE%89%E8%A3%85jupyterlab30">安装jupyterlab3.0</a>
+<ul>
+<li><a href="#%E9%85%8D%E7%BD%AE%E9%83%A8%E5%88%86%E4%BB%85%E4%BE%9B%E5%8F%82%E8%80%83%E5%BB%BA%E8%AE%AE%E7%9B%B4%E6%8E%A5%E7%99%BE%E5%BA%A6">配置部分（仅供参考，建议直接百度）</a></li>
+</ul>
+</li>
 <li><a href="#%E5%AE%89%E8%A3%85%E4%B8%AD%E6%96%87%E6%8F%92%E4%BB%B6">安装中文插件</a></li>
 <li><a href="#%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98">可能出现的问题</a></li>
 </ul>
