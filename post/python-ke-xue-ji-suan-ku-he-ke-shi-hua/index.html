@@ -1,0 +1,411 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Python 科学计算库和可视化 | Qi</title>
+<link rel="shortcut icon" href="https://qi-xmu.github.io/favicon.ico?v=1615384283317">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://qi-xmu.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Python 科学计算库和可视化 | Qi - Atom Feed" href="https://qi-xmu.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="利用Python处理数据，一般常用的库包括 Numpy，Pandas，Matplotlib，PIL。下面是他们的基本使用方法。
+
+Numpy库
+**Numpy **是Python科学计算库的基础。包含了强大的N维数组对象和向量运算。
+中文文..." />
+    <meta name="keywords" content="jupyterlab,python" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://qi-xmu.github.io">
+  <img class="avatar" src="https://qi-xmu.github.io/images/avatar.png?v=1615384283317" alt="">
+  </a>
+  <h1 class="site-title">
+    Qi
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+        <a href="https://github.com/qi-xmu" target="_blank">
+          <i class="ri-github-line"></i>
+        </a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Python 科学计算库和可视化
+            </h2>
+            <div class="post-info">
+              <span>
+                2021-03-10
+              </span>
+              <span>
+                5 min read
+              </span>
+              
+                <a href="https://qi-xmu.github.io/tag/zoo8FI2V9/" class="post-tag">
+                  # jupyterlab
+                </a>
+              
+                <a href="https://qi-xmu.github.io/tag/HF5waRwcJ/" class="post-tag">
+                  # python
+                </a>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>利用Python处理数据，一般常用的库包括 Numpy，Pandas，Matplotlib，PIL。下面是他们的基本使用方法。</p>
+<!--more-->
+<h2 id="numpy库">Numpy库</h2>
+<p>**Numpy **是Python科学计算库的基础。包含了强大的N维数组对象和向量运算。</p>
+<p><a href="https://www.numpy.org.cn/">中文文档</a> | <a href="https://numpy.org/doc/stable/reference/index.html">官方文档</a></p>
+<p>安装：<code>pip install numpy</code></p>
+<pre><code class="language-python">import numpy as np
+</code></pre>
+<h3 id="array-的生成">array 的生成</h3>
+<pre><code class="language-python">arr = np.array(list1/tuple1)
+# eg.
+arr = np.array([[1,2,3],
+                 [4,5,6]])
+# range
+array = np.arange(start, end, step)
+# eg.
+
+array = np.arange(10, 31, 5)	# [10 15 20 25 30]
+# one
+arr2 = np.ones([2,3],dtype=np.int64) 	# [[1 1 1]
+ 										# [1 1 1]]
+</code></pre>
+<h3 id="数组的方法">数组的方法</h3>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arr.shape</code></td>
+<td>数组的形状。返回 <em>(row, col)</em></td>
+</tr>
+<tr>
+<td><code>array.ndim</code></td>
+<td>数组的维度。2维数组返回 <em>2</em></td>
+</tr>
+<tr>
+<td><code>array.size</code></td>
+<td>返回 <em>数组元素的个数</em>。</td>
+</tr>
+<tr>
+<td><code>array.dtype</code></td>
+<td>返回 <em>数组元素类型</em>。</td>
+</tr>
+<tr>
+<td><code>array.reshape(row, col)</code></td>
+<td>重新定义数组的形状。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="数组的计算">数组的计算</h3>
+<p><strong>大小相等的数组之间的任何算术运算都会将运算应用到元素级</strong>。同样，数组与标量的算术运算也会将那个标量值传播到各个元素。</p>
+<pre><code class="language-python">np.dot(arr1,arr2) # 返回矩阵相乘结果
+np.sum(arr3,axis=0)
+</code></pre>
+<p>说明：axis=1 每一行求和；axie=0 每一列求和。若未定义axis，会把整个数组看成一维。</p>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>np.dot(arr1, arr2)</code></td>
+<td>矩阵相乘</td>
+</tr>
+<tr>
+<td><code>np.sum(arr, axis)</code></td>
+<td>矩阵求和。</td>
+</tr>
+<tr>
+<td><code>np.max(arr, axis)</code></td>
+<td>求数组arr最大值。</td>
+</tr>
+<tr>
+<td><code>np.min(arr, axis)</code></td>
+<td>求数组arr的最小值。</td>
+</tr>
+<tr>
+<td><code>np.mean(arr, axis)</code></td>
+<td>求数组的平均值。</td>
+</tr>
+<tr>
+<td><code>np.argmax(arr)</code></td>
+<td>求数组最大值的坐标。二维数组返回的仍是一维坐标。</td>
+</tr>
+<tr>
+<td><code>np.argmin(arr)</code></td>
+<td>求数组最小值的坐标。二维数组返回的仍是一维坐标。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="数组的切片">数组的切片</h3>
+<p>这个和 <strong>list</strong> 的用法基本一致。</p>
+<h2 id="pandas库">Pandas库</h2>
+<p>pandas是python第三方库，提供高性能易用数据类型和分析工具。pandas基于numpy实现，常与numpy和matplotlib一同使用。</p>
+<p><a href="https://www.pypandas.cn/">中文网站</a> | <a href="https://pandas.pydata.org/">官方网站</a></p>
+<p>安装：<code>pip install pandas</code></p>
+<pre><code class="language-python">import pandas as pd
+</code></pre>
+<h3 id="series">Series</h3>
+<p>Series是一种类似于一维数组的对象，它由一维数组（各种numpy数据类型）以及一组与之相关的数据标签（即索引）组成。</p>
+<p>Seris中可以使用index设置索引列表，与字典不同的是，Seris允许索引重复。</p>
+<pre><code class="language-python">pd.Series(list1/dirt1, index=[])
+# eg.
+s = pd.Series(['a','b','c','d','e'])
+# 访问
+index = s.index
+values = s.values
+</code></pre>
+<p>与普通numpy数组相比，可以通过索引的方式选取Series中的单个或一组值。</p>
+<pre><code class="language-python">s[index]
+# eg.
+s[[400, 500]]
+</code></pre>
+<p>Series中最重要的一个功能是：它会在算术运算中自动对齐不同索引的数据</p>
+<p>Series 和多维数组的主要区别在于， Series 之间的操作会自动基于标签对齐数据。因此，不用顾及执行计算操作的 Series 是否有相同的标签。</p>
+<h3 id="dataframe">DataFrame</h3>
+<p>DataFrame是一个表格型的数据结构，类似于Excel或sql表。它含有一组有序的列，每列可以是不同的值类型（数值、字符串、布尔值等）</p>
+<p>DataFrame既有行索引也有列索引，它可以被看做由Series组成的字典（共用同一个索引）</p>
+<figure data-type="image" tabindex="1"><img src="https://qi-xmu.github.io/post-images/1615384249737.png" alt="" loading="lazy"></figure>
+<pre><code class="language-python">df = pd.DataFrame()
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>常用参数</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>data</code></td>
+<td>初始数据。</td>
+</tr>
+<tr>
+<td><code>index</code></td>
+<td>行标签。</td>
+</tr>
+<tr>
+<td><code>column</code></td>
+<td>列标签。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="pil库">PIL库</h2>
+<p>PIL库是一个具有强大图像处理能力的第三方库。</p>
+<p>图像的组成：由RGB三原色组成,RGB图像中，一种彩色由R、G、B三原色按照比例混合而成。0-255区分不同亮度的颜色。</p>
+<p>图像的数组表示：图像是一个由像素组成的矩阵，每个元素是一个RGB值。</p>
+<p>安装：<code>pip install pillow</code></p>
+<pre><code class="language-python">from PIL import Image
+import matplotlib.pyplot as plt
+import numpy  as np
+</code></pre>
+<h3 id="基础操作">基础操作</h3>
+<pre><code class="language-python"># 读取图片
+img = Image.open(img_path)
+# 数组化
+img_array = np.array(img).astype('int64')
+# 调用软件显示图片 
+img.show()
+# 直接显示在图表中
+plt.imshow(img)
+plt.show()
+# 图像模式
+img_mode = plt.mode()
+# 图像的宽高
+width, height = img.size
+</code></pre>
+<h3 id="图像处理">图像处理</h3>
+<pre><code class="language-python">### 图像旋转
+img_rotate = img.rotate(deg) 
+### 图像剪切 
+img_cropt = img.crop((left_top_x, left_top_y, right_bottom_x, right_bottom_y))
+### 图像保存
+img.save(img_path)
+### 图像缩放
+## 参数说明
+# Image.NEAREST	低质量
+# Image.BILINEAR	双线性
+# Image.BICUBIC	三次样条插值
+# Image.ANTIALIAS	高质量
+img_resize = img.resize((int(width),int(height)),Image.ANTIALIAS)
+### 图像镜像
+## 参数说明
+# Image.FLIP_LEFT_RIGHT	左右镜像
+# Image.FLIP_TOP_BOTTOM	上下镜像
+img_lr = img.transpose(Image.FLIP_LEFT_RIGHT)
+</code></pre>
+<h2 id="matplotlib库">Matplotlib库</h2>
+<p>Matplotlib库由各种可视化类构成，内部结构复杂。</p>
+<p>matplotlib.pylot是绘制各类可视化图形的命令字库。</p>
+<p><a href="https://www.matplotlib.org.cn/">中文网站</a> | <a href="https://matplotlib.org/">官方网站</a></p>
+<p>安装：<code>pip install matplotlib</code></p>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+import numpy as np 
+</code></pre>
+<p>数据可视化参数众多，建议边查找官方文档边写代码，这里不做过多的总结。</p>
+<p><strong>建议查看：</strong> <a href="https://matplotlib.org/3.1.1/tutorials/introductory/pyplot.html">Pyplot说明书</a> | <a href="https://matplotlib.org/3.1.1/gallery/index.html#pyplots-examples">Pyplot示例</a></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#numpy%E5%BA%93">Numpy库</a>
+<ul>
+<li><a href="#array-%E7%9A%84%E7%94%9F%E6%88%90">array 的生成</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95">数组的方法</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84%E7%9A%84%E8%AE%A1%E7%AE%97">数组的计算</a></li>
+<li><a href="#%E6%95%B0%E7%BB%84%E7%9A%84%E5%88%87%E7%89%87">数组的切片</a></li>
+</ul>
+</li>
+<li><a href="#pandas%E5%BA%93">Pandas库</a>
+<ul>
+<li><a href="#series">Series</a></li>
+<li><a href="#dataframe">DataFrame</a></li>
+</ul>
+</li>
+<li><a href="#pil%E5%BA%93">PIL库</a>
+<ul>
+<li><a href="#%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C">基础操作</a></li>
+<li><a href="#%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86">图像处理</a></li>
+</ul>
+</li>
+<li><a href="#matplotlib%E5%BA%93">Matplotlib库</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://qi-xmu.github.io/post/ptyon-csv-wen-jian-cao-zuo/">
+              <h3 class="post-title">
+                 Ptyon: CSV文件操作
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://qi-xmu.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

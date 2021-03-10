@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://qi-xmu.github.io</id>
     <title>Qi</title>
-    <updated>2021-03-10T05:08:59.075Z</updated>
+    <updated>2021-03-10T13:51:40.372Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://qi-xmu.github.io"/>
     <link rel="self" href="https://qi-xmu.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://qi-xmu.github.io/images/avatar.png</logo>
     <icon>https://qi-xmu.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, Qi</rights>
+    <entry>
+        <title type="html"><![CDATA[Python 科学计算库和可视化]]></title>
+        <id>https://qi-xmu.github.io/post/python-ke-xue-ji-suan-ku-he-ke-shi-hua/</id>
+        <link href="https://qi-xmu.github.io/post/python-ke-xue-ji-suan-ku-he-ke-shi-hua/">
+        </link>
+        <updated>2021-03-10T13:48:29.000Z</updated>
+        <summary type="html"><![CDATA[<p>利用Python处理数据，一般常用的库包括 Numpy，Pandas，Matplotlib，PIL。下面是他们的基本使用方法。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>利用Python处理数据，一般常用的库包括 Numpy，Pandas，Matplotlib，PIL。下面是他们的基本使用方法。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ Ptyon: CSV文件操作]]></title>
         <id>https://qi-xmu.github.io/post/ptyon-csv-wen-jian-cao-zuo/</id>
