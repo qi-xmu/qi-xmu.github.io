@@ -1,6 +1,6 @@
 ---
 title: "Astro Cactus 中文使用说明"
-publishDate: "24 March 2025"
+publishDate: "2025/07/24"
 description: "Astro Cactus 中文说明。"
 tags: ["example", "blog"]
 coverImage:
