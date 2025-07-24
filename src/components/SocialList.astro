@@ -13,20 +13,20 @@ const socialLinks: {
 	name: string;
 }[] = [
 	{
+		friendlyName: "电子邮件",
+		link: "mailto:qi_xmu@icloud.com",
+		name: "mdi:email",
+	},
+	{
 		friendlyName: "Github",
 		link: "https://github.com/qi-xmu",
 		name: "mdi:github",
-	},
-	{
-		friendlyName: "Email",
-		link: "mailto:qi_xmu@icloud.com",
-		name: "mdi:email",
 	},
 ];
 ---
 
 <div class="flex flex-wrap items-end gap-x-2">
-	<p>Find me</p>
+	<p>通过以下方式联系我：</p>
 	<ul class="flex flex-1 items-center gap-x-2 sm:flex-initial">
 		{
 			socialLinks.map(({ friendlyName, isWebmention, link, name }) => (

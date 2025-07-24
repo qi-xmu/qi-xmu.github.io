@@ -6,19 +6,19 @@ export const siteConfig: SiteConfig = {
 	author: "QI Z",
 	// Date.prototype.toLocaleDateString() parameters, found in src/utils/date.ts.
 	date: {
-		locale: "en-GB",
+		locale: "zh-CN",
 		options: {
-			day: "numeric",
-			month: "short",
+			day: "2-digit",
+			month: "2-digit",
 			year: "numeric",
 		},
 	},
 	// Used as the default description meta property and webmanifest description
-	description: "An attempt to write blog in English.",
+	description: "Qi Z's blog, a place for my thoughts and ideas.",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
-	lang: "en-GB",
+	lang: "zh-CN",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
+	ogLocale: "zh_CN",
 	// Used to construct the meta title property found in src/components/BaseHead.astro L:11, and webmanifest name found in astro.config.ts L:42
 	title: "Qi Z",
 	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
@@ -29,19 +29,19 @@ export const siteConfig: SiteConfig = {
 export const menuLinks: { path: string; title: string }[] = [
 	{
 		path: "/",
-		title: "Home",
+		title: "首页",
 	},
 	{
 		path: "/about/",
-		title: "About",
+		title: "关于",
 	},
 	{
 		path: "/posts/",
-		title: "Blog",
+		title: "文章",
 	},
 	{
 		path: "/notes/",
-		title: "Notes",
+		title: "笔记",
 	},
 ];
 
